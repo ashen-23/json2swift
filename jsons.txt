@@ -1,0 +1,71 @@
+{
+  "status": 200,
+  "message": "操作成功",
+  "data": {
+    "uuid": 100000763,
+    "relation": null,
+    "pid": null,
+    "createTime": 1509446823000,
+    "patientId": "59f854a7b07658c4c35e69bf",
+    "name": "语音",
+    "loginname": "18123786768",
+    "sex": "女",
+    "birthday": null,
+    "photourl": null,
+    "kind": "person",
+    "aidUuid": 100000037,
+    "aidName": "袁卫岗",
+    "coopId": null,
+    "exist": true,
+    "appointDoctorId": null,
+    "appointDoctorName": null,
+    "age": "77",
+    "videoToken": "4479b98b7072cd2ddabd3673105b1020",
+    "product": {
+      "productDetail": [
+        {
+          "name": "24小时家庭医生视频",
+          "content": "免费咨询1次",
+          "tips": "超出后收费标准 39元/次"
+        },
+        {
+          "name": "专属家庭医生",
+          "content": "设置自己专属家庭医生",
+          "tips": ""
+        },
+        {
+          "name": "三甲专家视频咨询",
+          "content": "免费视频1次",
+          "tips": "超出后按实际标准收费"
+        },
+        {
+          "name": "就医助理",
+          "content": "24小时在线服务",
+          "tips": null
+        }
+      ],
+      "productServiceId": 1,
+      "productServiceName": "安享卡",
+      "productPrice": 199,
+      "batchType": "number",
+      "batchNum": 1,
+      "createTime": 1501474610000,
+      "isSelfDoctor": true,
+      "expertBatchNum": 1,
+      "vipReferralNum": 0,
+      "famDoctorPrice": 1,
+      "appointmentHospitalNum": null,
+      "carNum": null,
+      "originPrice": null,
+      "expireTime": 1514733839000,
+      "validateMonth": 12,
+      "expirationTime": 1514733839000,
+      "selfDoctor": true
+    },
+    "accountMoney": 0,
+    "children": null,
+    "companyId": null,
+    "test": false,
+    "buyProduct": true
+  }
+}
