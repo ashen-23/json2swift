@@ -10,7 +10,7 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
 
 - How to use?
 
-  ### [OS X app](./Document/json2Swift.app)
+  ### [OS X app](https://pan.baidu.com/s/1skW4Jxj)
 
   - 1. Input json to left
 
