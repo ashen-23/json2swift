@@ -17,7 +17,7 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
   - 2. click "convert=>"
 
   - 3. Copy the result
-      Parameters statement:
+    Parameters statement:
 
     -  [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper): Simple JSON Object mapping written in Swift. If this is selected, result will auto add func mapping
 
@@ -44,5 +44,5 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
 
 - python 简单入门指北
 - [Python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
-- [[Running a Python Script from Swift](http://martinhoeller.net/running-a-python-script-from-swift/)]
+- [Running a Python Script from Swift](http://martinhoeller.net/running-a-python-script-from-swift/)
 

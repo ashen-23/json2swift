@@ -26,5 +26,5 @@
 
 - python 简单入门指北
 - [Python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
-- [[Running a Python Script from Swift](http://martinhoeller.net/running-a-python-script-from-swift/)]
+- [Running a Python Script from Swift](http://martinhoeller.net/running-a-python-script-from-swift/)
 
