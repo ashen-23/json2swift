@@ -7,6 +7,8 @@
 //
 	
 struct data: Mappable {
+    var status: Int?
+    var message: String?
     var uuid: Int?
     var relation: String?
     var pid: String?
@@ -32,11 +34,14 @@ struct data: Mappable {
     var companyId: String?
     var test: Bool?
     var buyProduct: Bool?
+    var data: None?
 
 	public init?(map: Map) {
 	}
 
 	mutating public func mapping(map: Map) {
+		status <- map["status"]
+		message <- map["message"]
 		uuid <- map["uuid"]
 		relation <- map["relation"]
 		pid <- map["pid"]
@@ -62,6 +67,72 @@ struct data: Mappable {
 		companyId <- map["companyId"]
 		test <- map["test"]
 		buyProduct <- map["buyProduct"]
+		data <- map["data"]
+	}
+}
+
+struct data: Mappable {
+    var status: Int?
+    var message: String?
+    var uuid: Int?
+    var relation: String?
+    var pid: String?
+    var createTime: Int?
+    var patientId: String?
+    var name: String?
+    var loginname: String?
+    var sex: String?
+    var birthday: String?
+    var photourl: String?
+    var kind: String?
+    var aidUuid: Int?
+    var aidName: String?
+    var coopId: String?
+    var exist: Bool?
+    var appointDoctorId: String?
+    var appointDoctorName: String?
+    var age: String?
+    var videoToken: String?
+    var product: None?
+    var accountMoney: Int?
+    var children: String?
+    var companyId: String?
+    var test: Bool?
+    var buyProduct: Bool?
+    var data: None?
+
+	public init?(map: Map) {
+	}
+
+	mutating public func mapping(map: Map) {
+		status <- map["status"]
+		message <- map["message"]
+		uuid <- map["uuid"]
+		relation <- map["relation"]
+		pid <- map["pid"]
+		createTime <- map["createTime"]
+		patientId <- map["patientId"]
+		name <- map["name"]
+		loginname <- map["loginname"]
+		sex <- map["sex"]
+		birthday <- map["birthday"]
+		photourl <- map["photourl"]
+		kind <- map["kind"]
+		aidUuid <- map["aidUuid"]
+		aidName <- map["aidName"]
+		coopId <- map["coopId"]
+		exist <- map["exist"]
+		appointDoctorId <- map["appointDoctorId"]
+		appointDoctorName <- map["appointDoctorName"]
+		age <- map["age"]
+		videoToken <- map["videoToken"]
+		product <- map["product"]
+		accountMoney <- map["accountMoney"]
+		children <- map["children"]
+		companyId <- map["companyId"]
+		test <- map["test"]
+		buyProduct <- map["buyProduct"]
+		data <- map["data"]
 	}
 }
 
