@@ -9,3 +9,4 @@ with open("jsons.txt","r") as f:
 	
 	with open("ResultModel.swift", "w") as w:
 		w.writelines([line+'\n' for line in result])	
+		print("finished")
