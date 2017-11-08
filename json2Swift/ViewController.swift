@@ -13,7 +13,9 @@ class ViewController: NSViewController {
     @IBOutlet var inputView: NSTextView!
     @IBOutlet var outputView: NSTextView!
     @IBOutlet weak var mapperCheck: NSButton!
-    
+    @IBOutlet weak var nameText: NSTextField!
+    @IBOutlet weak var prefixText: NSTextField!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,10 +31,16 @@ class ViewController: NSViewController {
         var args = [aPath]
         // 参数
         args.append(inputView.string)
-                
-        if mapperCheck.state == .on {
-            args.append("objectMapper")
-        }
+    
+        // mapper
+        args.append(mapperCheck.state == .on ? "objectMapper" : "none")
+
+        // name
+        let name = nameText.stringValue == "" ? "Result" : nameText.stringValue
+        args.append(name)
+        
+        // prefix
+        args.append(prefixText.stringValue)
         
         runPython(args: args)
     }
@@ -72,6 +80,8 @@ class ViewController: NSViewController {
     
     @IBAction func runDemo(_ sender: NSButton) {
         inputView.string = demoJson
+        nameText.stringValue = "Result"
+        prefixText.stringValue = "SJ_"
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
            self.doExcute(sender)

@@ -16,8 +16,8 @@ classNames = []
 # 最终文件
 save2File = []
 structType = "" # 转换类型
-prefix = "SJ" # 前缀
-outerName = "ResultModel"
+prefix = "" # 前缀
+outerName = ""
 
 # 初始化header
 def configHeader():
@@ -131,8 +131,11 @@ def process(aDict, name):
 
 # 执行
 input = sys.argv[1]
-if len(sys.argv) >= 3:
+# 解析参数
+if len(sys.argv) >= 4:
     structType = sys.argv[2]
+    outerName = sys.argv[3]
+    prefix = sys.argv[4]
 
 try:
     res = json.loads(input)
