@@ -25,15 +25,15 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
 
     -  prefix: the prefix of each struct name, default is empty.
 
-       ​
+
   ###[python script](./script)
 
    - 1. open Terminal, cd to Main.py
 
-   -  ​ 2.  Copy json string to File named "jsons.txt"
+   - 2. Copy json string to File named "jsons.txt"
 
    - 3. Python3 Main.py
 
    - 4. ResultModel.swift is the result
 
-       ![](./Document/terminal_ope.gif)
+   ![](./Document/terminal_ope.gif)
