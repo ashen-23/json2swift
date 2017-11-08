@@ -10,7 +10,7 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
 
 - How to use?
 
-  ### [OS X app](https://pan.baidu.com/s/1skW4Jxj)
+   [OS X app](https://pan.baidu.com/s/1skW4Jxj)
 
   - 1. Input json to left
 
@@ -26,7 +26,7 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
     -  prefix: the prefix of each struct name, default is empty.
 
 
-  ###[python script](./script)
+  [python script](./script)
 
    - 1. open Terminal, cd to Main.py
 
@@ -37,3 +37,12 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
    - 4. ResultModel.swift is the result
 
    ![](./Document/terminal_ope.gif)
+
+***
+
+## Reference
+
+- python 简单入门指北
+- [Python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
+- [[Running a Python Script from Swift](http://martinhoeller.net/running-a-python-script-from-swift/)]
+
