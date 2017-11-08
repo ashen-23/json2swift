@@ -21,7 +21,9 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
     Parameters statement:
 
     -  [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper): Simple JSON Object mapping written in Swift. If this is selected, result will auto add func mapping
-    - name: the name of the result, default is "Result"
-    - prefix: the prefix of each struct name, default is empty.
+    -  name: the name of the result, default is "Result"
+    -  prefix: the prefix of each struct name, default is empty.
+
 
   ###[python script](./script)
+

@@ -134,8 +134,8 @@ input = sys.argv[1]
 # 解析参数
 if len(sys.argv) >= 4:
     structType = sys.argv[2]
-    outerName = sys.argv[3]
     prefix = sys.argv[4]
+    outerName = realKey(sys.argv[3])
 
 try:
     res = json.loads(input)
