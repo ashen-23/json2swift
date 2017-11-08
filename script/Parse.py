@@ -17,12 +17,12 @@ save2File = []
 # 初始化header
 def configHeader():
 	header = '''//
-	//  {0}.swift
-	//  HPacs
-	//
-	//  Created by sr on 16/2/23.
-	//  Copyright © 2016年 HH. All rights reserved.
-	//
+//  {0}.swift
+//  HPacs
+//
+//  Created by sr on 16/2/23.
+//  Copyright © 2016年 HH. All rights reserved.
+//
 	'''.format(classNames[0])
 	save2File.append(header)
 	

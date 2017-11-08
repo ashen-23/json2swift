@@ -1,10 +1,10 @@
 //
-	//  data.swift
-	//  HPacs
-	//
-	//  Created by sr on 16/2/23.
-	//  Copyright © 2016年 HH. All rights reserved.
-	//
+//  data.swift
+//  HPacs
+//
+//  Created by sr on 16/2/23.
+//  Copyright © 2016年 HH. All rights reserved.
+//
 	
 struct data: Mappable {
     var uuid: Int?

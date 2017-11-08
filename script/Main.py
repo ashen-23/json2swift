@@ -8,5 +8,5 @@ with open("jsons.txt","r") as f:
 	# 输出
 	result = Parse.process(res, "data")
 	
-	with open("data", "w") as w:
+	with open("ResultModel.swift", "w") as w:
 		w.writelines([line+'\n' for line in result])	
