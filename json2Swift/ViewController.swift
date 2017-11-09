@@ -27,14 +27,34 @@ class ViewController: NSViewController {
     }
 
     @IBAction func doExcute(_ sender: NSButton) {
-        guard let aPath = Bundle.main.path(forResource: "Parse", ofType: "py") else { return }
-        var args = [aPath]
-        // 参数
-        args.append(inputView.string)
+        runScript()
+    }
     
+    func runScript() {
+        guard let aPath = Bundle.main.path(forResource: "Parse", ofType: "py") else { return }
+        
+        let script = PyScript(scrPath: aPath, args: fetchArgs()) { [weak self] in
+            self?.scriptFinish(results: $0, error: $1)
+        }
+
+        script.runAsync()
+    }
+    
+    // 执行完成的回调
+    func scriptFinish(results: [String], error: String?) {
+        if let aError = error {
+            outputView.string = "解析错误\r\n" + aError
+            return
+        }
+        
+        outputView.string = results[0]
+    }
+    
+    func fetchArgs() -> [String] {
+        var args = [inputView.string]
         // mapper
         args.append(mapperCheck.state == .on ? "objectMapper" : "none")
-
+        
         // name
         let name = nameText.stringValue == "" ? "Result" : nameText.stringValue
         args.append(name)
@@ -42,40 +62,7 @@ class ViewController: NSViewController {
         // prefix
         args.append(prefixText.stringValue)
         
-        runPython(args: args)
-    }
-    
-    func runPython(args: [String]?) {
-        
-        let buildTask = Process()
-        let outPip = Pipe()
-        let errorPipe = Pipe()
-        
-        buildTask.launchPath = "/usr/bin/python"
-        buildTask.arguments = args
-        buildTask.standardInput = Pipe()
-        buildTask.standardOutput = outPip
-        buildTask.standardError = errorPipe
-        buildTask.terminationHandler = { p in
-            self.taskFinish()
-        }
-        buildTask.launch()
-        buildTask.waitUntilExit()
-        
-        let data = outPip.fileHandleForReading.readDataToEndOfFile()
-        let str = String(data: data, encoding: String.Encoding.utf8)
-        outputView.string = str ?? "解析错误"
-        
-        // 错误处理
-        let errorData = errorPipe.fileHandleForReading.readDataToEndOfFile()
-        let errorStr = String(data: errorData, encoding: String.Encoding.utf8)
-        if let aError = errorStr, aError != "" {
-            outputView.string = "解析错误\r\n" + aError
-        }
-    }
-    
-    func taskFinish() {
-        print("执行完毕")
+        return args
     }
     
     @IBAction func runDemo(_ sender: NSButton) {
@@ -84,7 +71,7 @@ class ViewController: NSViewController {
         prefixText.stringValue = "SJ_"
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
-           self.doExcute(sender)
+           self.runScript()
         }
     }
 

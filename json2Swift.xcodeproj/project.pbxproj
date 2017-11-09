@@ -13,6 +13,7 @@
 		95C6F59A1FB2A00F00667862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5981FB2A00F00667862 /* Main.storyboard */; };
 		95C6F5A51FB2A05900667862 /* Parse.py in Resources */ = {isa = PBXBuildFile; fileRef = 95C6F5A31FB2A05900667862 /* Parse.py */; };
 		95CFA2881FB2E361003561F2 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFA2871FB2E361003561F2 /* Demo.swift */; };
+		95CFA28A1FB3ED3F003561F2 /* PyScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFA2891FB3ED3F003561F2 /* PyScript.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		95C6F59C1FB2A00F00667862 /* json2Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = json2Swift.entitlements; sourceTree = "<group>"; };
 		95C6F5A31FB2A05900667862 /* Parse.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Parse.py; sourceTree = "<group>"; };
 		95CFA2871FB2E361003561F2 /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		95CFA2891FB3ED3F003561F2 /* PyScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyScript.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				95C6F5A21FB2A01D00667862 /* script */,
 				95C6F5921FB2A00F00667862 /* AppDelegate.swift */,
 				95C6F5941FB2A00F00667862 /* ViewController.swift */,
+				95CFA2891FB3ED3F003561F2 /* PyScript.swift */,
 				95C6F5961FB2A00F00667862 /* Assets.xcassets */,
 				95C6F5981FB2A00F00667862 /* Main.storyboard */,
 				95C6F59B1FB2A00F00667862 /* Info.plist */,
@@ -152,6 +155,7 @@
 				95C6F5951FB2A00F00667862 /* ViewController.swift in Sources */,
 				95C6F5931FB2A00F00667862 /* AppDelegate.swift in Sources */,
 				95CFA2881FB2E361003561F2 /* Demo.swift in Sources */,
+				95CFA28A1FB3ED3F003561F2 /* PyScript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
