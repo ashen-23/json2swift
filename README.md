@@ -17,7 +17,7 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
   - 2. click "convert=>"
 
   - 3. Copy the result
-    Parameters statement:
+      Parameters statement:
 
     -  [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper): Simple JSON Object mapping written in Swift. If this is selected, result will auto add func mapping
 
@@ -41,7 +41,24 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
 ***
 
 ## Other
-[PyScript](): a fast way to use python with Cocoa
+[CocoaPython](./json2Swift/CocoaPython.swift): a fast way to use python with Cocoa.
+we can use CocoaPython.swift like this:
+```swift
+// python path
+guard let aPath = Bundle.main.path(forResource: "Parse", ofType: "py") else { return }
+
+// args: python accept paras
+// block: complete block
+let script = CocoaPython(scrPath: aPath, args: [""]) { [weak self] in
+    print($0) // python's return
+    print($1) // python's Error
+}
+
+script.spliPara = "$" // the multi results's split Character, if not set, all the results is in result[0]. 
+script.runAsync()
+// or script.runAsync(asyncComlete: false) // the complete block call in global async
+// or script.runSync() // run in current thread
+```
 
 ***
 ## Reference

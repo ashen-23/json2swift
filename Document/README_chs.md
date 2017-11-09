@@ -20,8 +20,29 @@
 
   ![](./terminal_ope.gif)
 
-  ***
+***
 
+## 其他
+[CocoaPython](./json2Swift/CocoaPython.swift): 封装后的Process，便于直接调用python脚本
+使用如下:
+```swift
+// python脚本文件路径
+guard let aPath = Bundle.main.path(forResource: "Parse", ofType: "py") else { return }
+
+// args: py文件接受的参数列表，通过sys.argv[i]访问
+// block: 完成后的回调，包括返回值和错误内容
+let script = CocoaPython(scrPath: aPath, args: [""]) { [weak self] in
+    print($0) // 返回值，所有的py中print()的内容
+    print($1) // py中的错误信息
+}
+
+script.spliPara = "$" // 如果有多个结果，每个结果之间的分隔符，不设置则将所有的结果当成一个结果返回，即result == result[0]
+script.runAsync() // 异步执行，回调在异步主线程中调用
+// or script.runAsync(asyncComlete: false) // 异步执行，回调在global中执行
+// or script.runSync() // 同步执行
+```
+
+***
 ## 参考
 
 - python 简单入门指北
