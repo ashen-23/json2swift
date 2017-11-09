@@ -40,6 +40,10 @@ auto convert json string to swift struct.[中文介绍](./Document/README_chs.md
 
 ***
 
+## Other
+[PyScript](): a fast way to use python with Cocoa
+
+***
 ## Reference
 
 - python 简单入门指北

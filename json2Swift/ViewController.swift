@@ -33,7 +33,7 @@ class ViewController: NSViewController {
     func runScript() {
         guard let aPath = Bundle.main.path(forResource: "Parse", ofType: "py") else { return }
         
-        let script = PyScript(scrPath: aPath, args: fetchArgs()) { [weak self] in
+        let script = CocoaPython(scrPath: aPath, args: fetchArgs()) { [weak self] in
             self?.scriptFinish(results: $0, error: $1)
         }
 

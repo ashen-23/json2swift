@@ -1,5 +1,5 @@
 //
-//  PyScript.swift
+//  CocoaPython.swift
 //  json2Swift
 //
 //  Created by Shi Jian on 2017/11/9.
@@ -10,7 +10,7 @@ import Cocoa
 
 public typealias completeBlock = ((_ results: [String], _ errors: String?)->Void)
 
-public class PyScript {
+public class CocoaPython {
 
     let buildTask = Process()
     let outPip = Pipe()
@@ -69,10 +69,9 @@ public class PyScript {
             self.runSync()
         }
     }
-    
 }
 
-extension PyScript {
+extension CocoaPython {
     
     /// 执行block回调
     fileprivate func runComlete(_ result: [String], _ error: String?) {
